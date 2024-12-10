@@ -9,17 +9,15 @@ class FilaContigua
     public:
         FilaContigua(int max);
         ~FilaContigua();
-        int get(int p);
-        int getSize();
-        void set(int p, int val);
-        void newEnd(int val);
-        void deleteEnd();
-        void newNode(int p, int val);
-        void deleteNode(int p);
+        int getInicio();
+        void enfileira(int n);
+        int desenfileira();
+        bool vazia();
 
     private:
-        int n;
         int max;
+        int inicio;
+        int fim;
         int* vet;
 };
 
