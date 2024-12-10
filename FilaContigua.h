@@ -1,14 +1,14 @@
-#ifndef PILHACONTIGUA_H__
-#define PILHACONTIGUA_H__
+#ifndef FILACONTIGUA_H__
+#define FILACONTIGUA_H__
 #include <iostream>
 
 using namespace std;
 
-class PilhaContigua
+class FilaContigua
 {
     public:
-        PilhaContigua(int max);
-        ~PilhaContigua();
+        FilaContigua(int max);
+        ~FilaContigua();
         int get(int p);
         int getSize();
         void set(int p, int val);

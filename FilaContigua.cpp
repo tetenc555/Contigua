@@ -1,40 +1,40 @@
 #include <iostream>
 using namespace std;
 
-#include "PilhaContigua.h"
+#include "Fila.h"
 
-PilhaContigua::PilhaContigua(int max)
+Fila::Fila(int max)
 {
     max=max;
     n=0;
     vet=new int [max];
 }
 
-PilhaContigua::~PilhaContigua()
+Fila::~Fila()
 {
     delete [] vet;
 }
 
-int PilhaContigua::get(int p)
+int Fila::get(int p)
 {
     if (p<0 || p>=n)
         exit(1);
     return vet[p];
 }
 
-int PilhaContigua::getSize()
+int Fila::getSize()
 {
     return n;
 }
 
-void PilhaContigua::set(int p, int val)
+void Fila::set(int p, int val)
 {
     if (p<0 || p>=n)
         return;
     vet[p] = val;
 }
 
-void PilhaContigua::newEnd(int val)
+void Fila::newEnd(int val)
 {
     if(n>=max)
         return;
@@ -42,14 +42,14 @@ void PilhaContigua::newEnd(int val)
     n++;
 }
 
-void PilhaContigua::deleteEnd()
+void Fila::deleteEnd()
 {
     if(n==0)
         return;
     n--;
 }
 
-void PilhaContigua::newNode(int p, int val)
+void Fila::newNode(int p, int val)
 {
     if(p<0 || p>=n || n==max)
     {
@@ -62,7 +62,7 @@ void PilhaContigua::newNode(int p, int val)
     n++;
 }
 
-void PilhaContigua::deleteNode (int p)
+void Fila::deleteNode (int p)
 {
     if(p<0 || p>=n || n==max)
     {
